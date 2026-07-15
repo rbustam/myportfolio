@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ramon — Web Developer</title>
-<meta name="description" content="Ramon — Web Developer with 4+ years of experience in WordPress, PHP and JavaScript, based in Sydney, Australia.">
+<title>Ramon Bustamante — Web Developer</title>
+<meta name="description" content="Ramon Bustamante — Web Developer with 4+ years of experience in WordPress, PHP and JavaScript, based in Sydney, Australia.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231D4A34'/%3E%3Ctext x='32' y='43' font-family='Georgia, serif' font-size='30' font-weight='700' fill='%23EDEFEA' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -194,6 +194,18 @@
   .tl-item li{position:relative;padding-left:16px;margin-bottom:6px}
   .tl-item li::before{content:"–";position:absolute;left:0;color:var(--gold)}
 
+  /* ---------- Education ---------- */
+  .edu-card{
+    border:1px solid var(--line);border-radius:8px;padding:28px 30px;
+    background:var(--paper-raised);display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;
+  }
+  .edu-card .edu-main h3{font-size:1.1rem;font-weight:600;margin-bottom:4px}
+  .edu-card .edu-org{color:var(--moss-deep);font-weight:600;font-size:.92rem;margin-bottom:10px}
+  .edu-card .edu-date{font-family:var(--font-mono);font-size:.78rem;color:var(--slate)}
+  .edu-card ul{color:var(--slate);font-size:.92rem;max-width:520px}
+  .edu-card li{position:relative;padding-left:16px;margin-bottom:6px}
+  .edu-card li::before{content:"–";position:absolute;left:0;color:var(--gold)}
+
   /* ---------- Projects ---------- */
   .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .project-card{
@@ -272,6 +284,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -279,8 +292,7 @@
         <span class="hamburger"><span></span><span></span><span></span></span>
       </button>
     </nav>
-    <!-- EDIT: point this at your actual resume file once you have one hosted, e.g. /resume.pdf -->
-    <a href="#" class="btn btn-outline header-cta" target="_blank" rel="noopener">Resume</a>
+    <a href="resume.pdf" class="btn btn-outline header-cta" target="_blank" rel="noopener">Resume</a>
   </div>
 </header>
 
@@ -291,11 +303,11 @@
     <div class="wrap">
       <div>
         <div class="eyebrow">portfolio.build — status: ready</div>
-        <!-- EDIT: your full name -->
-        <h1>Ramon <span>Dela Cruz</span></h1>
+        <h1>Ramon III M. <span>Bustamante</span></h1>
         <p class="lede">
-          Web developer with 4+ years building WordPress sites, custom PHP back ends and
-          JavaScript front ends — now based in Sydney and studying Applied AI at Macquarie University.
+          Web developer with 4+ years across the full development lifecycle — design, build,
+          testing, deployment and maintenance. Currently building custom WordPress solutions at
+          Advisen PHL, now based in Sydney and studying Applied AI at Macquarie University.
         </p>
 
         <div class="status-bar" aria-live="polite">
@@ -310,8 +322,7 @@
 
         <div class="hero-cta">
           <a href="#projects" class="btn btn-solid">View projects</a>
-          <!-- EDIT: replace with your email -->
-          <a href="mailto:you@email.com" class="btn btn-outline">Get in touch</a>
+          <a href="mailto:rbustam93@gamil.com" class="btn btn-outline">Get in touch</a>
         </div>
       </div>
 
@@ -330,12 +341,13 @@
       <div class="reveal">
         <div class="eyebrow">about</div>
         <h2 class="section-title">From WordPress builds to applied AI</h2>
-        <!-- EDIT: rewrite this in your own voice / add specifics -->
         <p>
-          Over the past four years I've worked across the full stack of small-to-mid-size web projects —
-          custom WordPress themes, ACF-driven content models, WooCommerce stores, and the PHP and MySQL
-          powering them behind the scenes. I've also connected sites to CRM and marketing tools like Kajabi
-          and LeadPages, and tuned pages for search with SEOPress and Yoast.
+          I'm a web developer experienced across the full development lifecycle — design, build,
+          testing, deployment and maintenance. Most recently I've been building custom WordPress
+          themes and ACF-driven page sections at <strong>Advisen PHL</strong>, after roles at
+          <strong>Snapscale</strong> (formerly Carpediem Solutions) and <strong>Carve Business
+          Management Services</strong>, where I worked on WooCommerce stores, third-party API
+          integrations and MySQL-backed hosting environments.
         </p>
         <p>
           I recently relocated my job search to Sydney, where I'm completing a Master of Information Technology,
@@ -364,38 +376,38 @@
       </div>
       <div class="skills-grid reveal">
         <div class="skill-card">
-          <span class="count">03 tools</span>
+          <span class="count">04 tools</span>
           <h3>Frontend</h3>
           <div class="tag-row">
-            <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
+            <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Responsive Design</span>
           </div>
         </div>
         <div class="skill-card">
-          <span class="count">02 tools</span>
-          <h3>Backend</h3>
+          <span class="count">05 tools</span>
+          <h3>Backend &amp; Databases</h3>
           <div class="tag-row">
-            <span class="tag">PHP</span><span class="tag">MySQL</span>
+            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">MSSQL</span><span class="tag">phpMyAdmin</span><span class="tag">C#</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <span class="count">04 tools</span>
+          <h3>CMS &amp; Ecommerce</h3>
+          <div class="tag-row">
+            <span class="tag">WordPress</span><span class="tag">ACF</span><span class="tag">WooCommerce</span><span class="tag">Page Builders</span>
           </div>
         </div>
         <div class="skill-card">
           <span class="count">03 tools</span>
-          <h3>CMS &amp; Ecommerce</h3>
+          <h3>Design &amp; 3D</h3>
           <div class="tag-row">
-            <span class="tag">WordPress</span><span class="tag">ACF</span><span class="tag">WooCommerce</span>
+            <span class="tag">Adobe Illustrator</span><span class="tag">Adobe Photoshop</span><span class="tag">Unity 3D</span>
           </div>
         </div>
         <div class="skill-card">
-          <span class="count">02 tools</span>
-          <h3>CRM &amp; Marketing</h3>
+          <span class="count">core</span>
+          <h3>Strengths</h3>
           <div class="tag-row">
-            <span class="tag">Kajabi</span><span class="tag">LeadPages</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <span class="count">02 tools</span>
-          <h3>SEO</h3>
-          <div class="tag-row">
-            <span class="tag">SEOPress</span><span class="tag">Yoast SEO</span>
+            <span class="tag">Performance Optimization</span><span class="tag">Problem Solving</span><span class="tag">Teamwork</span>
           </div>
         </div>
         <div class="skill-card learning">
@@ -416,31 +428,67 @@
         <div class="eyebrow">experience</div>
         <h2 class="section-title">Where I've worked</h2>
       </div>
-      <!-- EDIT: replace with your real roles. Duplicate a .tl-item block for more entries. -->
       <div class="timeline reveal">
         <div class="tl-item">
           <div class="tl-head">
-            <span class="tl-role">Web Developer</span>
-            <span class="tl-date">20XX — Present</span>
+            <span class="tl-role">Website Developer</span>
+            <span class="tl-date">Jan 2024 — Present</span>
           </div>
-          <div class="tl-org">Company Name, Davao City, PH</div>
+          <div class="tl-org">Advisen PHL, Inc.</div>
           <ul>
-            <li>Built and maintained custom WordPress themes for client sites</li>
-            <li>Developed PHP back-end features and MySQL data models</li>
-            <li>Set up WooCommerce stores and integrated CRM tools</li>
+            <li>Develop responsive custom WordPress themes in a PHP environment</li>
+            <li>Build custom WordPress page sections using the ACF plugin</li>
+            <li>Design layouts and UI following HTML/CSS best practices, plus QA and site testing</li>
+            <li>Deploy sites by configuring DNS and connecting hosting to WordPress</li>
           </ul>
         </div>
         <div class="tl-item">
           <div class="tl-head">
-            <span class="tl-role">Web Developer</span>
-            <span class="tl-date">20XX — 20XX</span>
+            <span class="tl-role">Website Developer</span>
+            <span class="tl-date">Nov 2021 — Jan 2024</span>
           </div>
-          <div class="tl-org">Company Name, Davao City, PH</div>
+          <div class="tl-org">Snapscale (formerly Carpediem Solutions)</div>
           <ul>
-            <li>Delivered front-end builds from design to deployment</li>
-            <li>Improved on-page SEO using SEOPress and Yoast</li>
+            <li>Developed, tested and deployed web applications with cross-functional teams</li>
+            <li>Built responsive interfaces with HTML5, CSS3 and JavaScript across devices</li>
+            <li>Built responsive pages using custom builder tools and plugins within WordPress</li>
+            <li>Tracked industry trends and recommended continuous improvements</li>
           </ul>
         </div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <span class="tl-role">Website Developer</span>
+            <span class="tl-date">2020 — 2021</span>
+          </div>
+          <div class="tl-org">Carve Business Management Services</div>
+          <ul>
+            <li>Integrated secure payment gateways for WooCommerce stores supporting 3,000+ users</li>
+            <li>Developed and integrated third-party APIs for order processing and data sync</li>
+            <li>Configured server-side environments, hosting, and MySQL databases via phpMyAdmin</li>
+            <li>Handled site migration, maintenance, debugging and performance checks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">education</div>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-main">
+          <h3>BS in Information Technology</h3>
+          <div class="edu-org">Holy Cross of Davao College</div>
+          <span class="edu-date">2016 — 2020</span>
+        </div>
+        <ul>
+          <li>Best in Capstone 2020 — Museo: a virtual tour guide for Davao Museum using augmented reality</li>
+          <li>Certificates: SMART SWEEP, CISCO Packet Tracer, Android Dev Training</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -452,16 +500,16 @@
         <div class="eyebrow">selected work</div>
         <h2 class="section-title">Projects</h2>
       </div>
-      <!-- EDIT: swap in your real projects, links and descriptions -->
+      <!-- EDIT: add live/repo links once you have them, and swap in more real client projects -->
       <div class="project-grid reveal">
         <div class="project-card">
           <div class="project-top">
-            <h3>Project One</h3>
+            <h3>Museo — AR Museum Tour Guide</h3>
             <span class="project-num">01</span>
           </div>
-          <p>One or two sentences on what this project does and the problem it solves.</p>
+          <p>Augmented reality virtual tour guide for the Davao Museum, built as a capstone project — awarded Best in Capstone 2020 at Holy Cross of Davao College.</p>
           <div class="tag-row">
-            <span class="tag">WordPress</span><span class="tag">PHP</span>
+            <span class="tag">Unity 3D</span><span class="tag">C#</span><span class="tag">AR</span>
           </div>
           <div class="project-links">
             <a href="#" target="_blank" rel="noopener">Live ↗</a>
@@ -473,9 +521,9 @@
             <h3>Project Two</h3>
             <span class="project-num">02</span>
           </div>
-          <p>One or two sentences on what this project does and the problem it solves.</p>
+          <p>Add a client or personal project here — e.g. a WordPress build, WooCommerce store, or custom theme you can showcase.</p>
           <div class="tag-row">
-            <span class="tag">JavaScript</span><span class="tag">MySQL</span>
+            <span class="tag">WordPress</span><span class="tag">PHP</span>
           </div>
           <div class="project-links">
             <a href="#" target="_blank" rel="noopener">Live ↗</a>
@@ -507,13 +555,14 @@
         <h2>Let's work together</h2>
         <p>Looking for a web developer or digital coordinator in Sydney? I'd love to hear from you.</p>
         <div class="prompt">
-          <!-- EDIT: swap in your real email, LinkedIn and GitHub -->
-          <div><span class="p1">$</span> <span class="p2">contact</span> --email <a href="mailto:you@email.com">you@email.com</a></div>
+          <!-- EDIT: double-check the email below — it looked like it might be a typo of gmail.com on your resume. Add your real LinkedIn/GitHub too. -->
+          <div><span class="p1">$</span> <span class="p2">contact</span> --email <a href="mailto:rbustam93@gamil.com">rbustam93@gamil.com</a></div>
+          <div><span class="p1">$</span> <span class="p2">contact</span> --phone <a href="tel:+639982073390">+63 998 207 3390</a></div>
           <div><span class="p1">$</span> <span class="p2">contact</span> --linkedin <a href="#" target="_blank" rel="noopener">linkedin.com/in/yourname</a></div>
           <div><span class="p1">$</span> <span class="p2">contact</span> --github <a href="#" target="_blank" rel="noopener">github.com/yourname</a></div>
         </div>
         <div class="contact-cta">
-          <a href="mailto:you@email.com" class="btn btn-solid" style="background:#5FCF8F;color:#12181B">Email me</a>
+          <a href="mailto:rbustam93@gamil.com" class="btn btn-solid" style="background:#5FCF8F;color:#12181B">Email me</a>
         </div>
       </div>
     </div>
