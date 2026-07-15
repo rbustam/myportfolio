@@ -34,9 +34,10 @@
 </header>
 
 <main id="top">
+<div class="hscroll" id="hscroll">
 
   <!-- ================= HERO ================= -->
-  <section class="hero">
+  <section class="hero panel">
     <div class="wrap">
       <div>
         <div class="eyebrow">portfolio.build — status: ready</div>
@@ -73,11 +74,11 @@
   </section>
 
   <!-- ================= ABOUT ================= -->
-  <section class="about" id="about">
+  <section class="about panel" id="about">
     <div class="wrap">
       <div class="reveal">
         <div class="eyebrow">about</div>
-        <h2 class="section-title">Web Development + applied AI</h2>
+        <h2 class="section-title">From WordPress builds to applied AI</h2>
         <p>
           I'm a web developer experienced across the full development lifecycle — design, build,
           testing, deployment and maintenance. Most recently I've been building custom WordPress
@@ -105,7 +106,7 @@
   </section>
 
   <!-- ================= SKILLS ================= -->
-  <section id="skills">
+  <section class="panel" id="skills">
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">stack</div>
@@ -159,7 +160,7 @@
   </section>
 
   <!-- ================= EXPERIENCE ================= -->
-  <section id="experience">
+  <section class="panel" id="experience">
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">experience</div>
@@ -169,7 +170,7 @@
         <div class="tl-item">
           <div class="tl-head">
             <span class="tl-role">Website Developer</span>
-            <span class="tl-date">Jan 2024 — July 2026</span>
+            <span class="tl-date">Jan 2024 — Present</span>
           </div>
           <div class="tl-org">Advisen PHL, Inc.</div>
           <ul>
@@ -210,7 +211,7 @@
   </section>
 
   <!-- ================= EDUCATION ================= -->
-  <section id="education">
+  <section class="panel" id="education">
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">education</div>
@@ -231,7 +232,7 @@
   </section>
 
   <!-- ================= PROJECTS ================= -->
-  <section id="projects">
+  <section class="panel" id="projects">
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">selected work</div>
@@ -286,30 +287,43 @@
   </section>
 
   <!-- ================= CONTACT ================= -->
-  <section id="contact">
-    <div class="contact reveal">
-      <div class="contact-inner">
-        <h2>Let's work together</h2>
-        <p>Looking for a web developer or digital coordinator in Sydney? I'd love to hear from you.</p>
-        <div class="prompt">
-          <!-- EDIT: double-check the email below — it looked like it might be a typo of gmail.com on your resume. Add your real LinkedIn/GitHub too. -->
-          <div><span class="p1">$</span> <span class="p2">contact</span> --email <a href="mailto:rbustam93@gmail.com">rbustam93@gmail.com</a></div>
-          <div><span class="p1">$</span> <span class="p2">contact</span> --phone <a href="tel:+6104003941724">+61 040 0394 1724</a></div>
-          <div><span class="p1">$</span> <span class="p2">contact</span> --linkedin <a href="https://www.linkedin.com/in/rbustam93/" target="_blank" rel="noopener">https://www.linkedin.com/in/rbustam93/</a></div>
-          <div><span class="p1">$</span> <span class="p2">contact</span> --github <a href="https://github.com/rbustam93" target="_blank" rel="noopener">github.com/rbustam93</a></div>
-        </div>
-        <div class="contact-cta">
-          <a href="mailto:rbustam93@gmail.com" class="btn btn-solid" style="background:#5FCF8F;color:#12181B">Email me</a>
+  <section class="panel panel-contact" id="contact">
+    <div class="wrap">
+      <div class="contact reveal">
+        <div class="contact-inner">
+          <h2>Let's work together</h2>
+          <p>Looking for a web developer or digital coordinator in Sydney? I'd love to hear from you.</p>
+          <div class="prompt">
+            <!-- EDIT: double-check the email below — it looked like it might be a typo of gmail.com on your resume. Add your real LinkedIn/GitHub too. -->
+            <div><span class="p1">$</span> <span class="p2">contact</span> --email <a href="mailto:rbustam93@gamil.com">rbustam93@gamil.com</a></div>
+            <div><span class="p1">$</span> <span class="p2">contact</span> --phone <a href="tel:+639982073390">+63 998 207 3390</a></div>
+            <div><span class="p1">$</span> <span class="p2">contact</span> --linkedin <a href="#" target="_blank" rel="noopener">linkedin.com/in/yourname</a></div>
+            <div><span class="p1">$</span> <span class="p2">contact</span> --github <a href="#" target="_blank" rel="noopener">github.com/yourname</a></div>
+          </div>
+          <div class="contact-cta">
+            <a href="mailto:rbustam93@gamil.com" class="btn btn-solid" style="background:#5FCF8F;color:#12181B">Email me</a>
+          </div>
         </div>
       </div>
+      <footer>
+        <span id="year"></span> · Built with HTML, CSS &amp; JS · Deployed on GitHub Pages
+      </footer>
     </div>
   </section>
 
-</main>
+</div><!-- /.hscroll -->
 
-<footer>
-  <span id="year"></span> · Built with HTML, CSS &amp; JS · Deployed on GitHub Pages
-</footer>
+<nav class="dot-nav" id="dotNav" aria-label="Section navigation">
+  <button data-index="0" aria-label="Go to Hero" class="active"></button>
+  <button data-index="1" aria-label="Go to About"></button>
+  <button data-index="2" aria-label="Go to Skills"></button>
+  <button data-index="3" aria-label="Go to Experience"></button>
+  <button data-index="4" aria-label="Go to Education"></button>
+  <button data-index="5" aria-label="Go to Projects"></button>
+  <button data-index="6" aria-label="Go to Contact"></button>
+</nav>
+
+</main>
 
 <script>
   // Footer year
@@ -342,6 +356,62 @@
         roleText.style.opacity = 1;
       }, 250);
     }, 2800);
+  }
+
+  // ---- Horizontal snap-scroll (desktop only; mobile stays normal vertical scroll) ----
+  const hscroll = document.getElementById('hscroll');
+  const panels = Array.from(document.querySelectorAll('.panel'));
+  const dotNav = document.getElementById('dotNav');
+  const dots = dotNav ? Array.from(dotNav.querySelectorAll('button')) : [];
+  const isDesktopLayout = () => window.innerWidth > 860;
+
+  // Redirect vertical wheel/trackpad input into horizontal movement
+  hscroll.addEventListener('wheel', (e) => {
+    if (!isDesktopLayout()) return;
+    if (Math.abs(e.deltaY) >= Math.abs(e.deltaX)) {
+      e.preventDefault();
+      hscroll.scrollLeft += e.deltaY;
+    }
+  }, { passive: false });
+
+  // Arrow-key / Page Up-Down navigation between panels
+  window.addEventListener('keydown', (e) => {
+    if (!isDesktopLayout()) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+      e.preventDefault();
+      hscroll.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      e.preventDefault();
+      hscroll.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+    }
+  });
+
+  // Nav links + logo + "View projects" scroll to the right panel instead of jumping vertically
+  document.querySelectorAll('#siteNav a, .hero-cta a[href^="#"], .logo').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const targetId = a.getAttribute('href').slice(1);
+      const target = document.getElementById(targetId);
+      if (!target || !isDesktopLayout()) return;
+      e.preventDefault();
+      hscroll.scrollTo({ left: target.offsetLeft, behavior: 'smooth' });
+    });
+  });
+
+  // Dot navigation: click to jump, and highlight whichever panel is active
+  if (dotNav) {
+    dots.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idx = parseInt(btn.dataset.index, 10);
+        hscroll.scrollTo({ left: panels[idx].offsetLeft, behavior: 'smooth' });
+      });
+    });
+    const syncDots = () => {
+      if (!isDesktopLayout()) return;
+      const idx = Math.round(hscroll.scrollLeft / window.innerWidth);
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    };
+    hscroll.addEventListener('scroll', syncDots);
+    syncDots();
   }
 
   // Scroll reveal
