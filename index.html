@@ -15,6 +15,7 @@
 <body>
   <div class="noise"></div>
   <div class="grid-bg"></div>
+  <div class="cursor-target" id="cursorTarget" aria-hidden="true"><span></span></div>
 
   <header>
     <div class="wrap nav-wrap">
@@ -39,6 +40,7 @@
     </div>
   </header>
 
+  <div class="scroll-progress" id="scrollProgress"></div>
   <main id="top">
     <!-- HERO -->
     <section class="hero">
@@ -111,8 +113,8 @@
             </p>
             <p>
               Most recently I've been building custom WordPress themes and ACF-driven
-              page sections at <strong>Advisen PHL</strong>, after working on WooCommerce,
-              APIs and MySQL-backed environments at Snapscale and Carve.
+              page sections at <strong>Zywave Inc.</strong>, after working on WooCommerce,
+              APIs and MySQL-backed environments at MyAdvice and Carve.
             </p>
           </div>
 
@@ -212,7 +214,7 @@
             <div class="timeline-marker">01</div>
             <div class="timeline-date">JAN 2024 — PRESENT</div>
             <div class="timeline-content">
-              <div class="job-top"><h3>Website Developer</h3><span>Advisen PHL, Inc.</span></div>
+              <div class="job-top"><h3>Website Developer</h3><span>Zywave Inc.</span></div>
               <ul>
                 <li>Develop responsive custom WordPress themes in a PHP environment.</li>
                 <li>Build custom page sections using ACF.</li>
@@ -227,7 +229,7 @@
             <div class="timeline-marker">02</div>
             <div class="timeline-date">NOV 2021 — JAN 2024</div>
             <div class="timeline-content">
-              <div class="job-top"><h3>Website Developer</h3><span>Snapscale</span></div>
+              <div class="job-top"><h3>Website Developer</h3><span>MyAdvice</span></div>
               <ul>
                 <li>Developed, tested and deployed web applications with cross-functional teams.</li>
                 <li>Built responsive interfaces with HTML5, CSS3 and JavaScript.</li>
@@ -311,11 +313,12 @@
         </div>
 
         <div class="project-cards">
-          <article class="project-small reveal">
+          <article class="project-small reveal project-link-card">
             <span>02 / WORDPRESS</span>
             <h3>Custom Theme Lab</h3>
-            <p>A space for a future public WordPress build, custom theme or ACF implementation.</p>
-            <div class="fake-browser"><i></i><i></i><i></i><b>YOUR PROJECT HERE</b></div>
+            <p>A custom WordPress theme built for Hazel Insurance Group, showcasing responsive layouts, CMS-driven content and production-ready website development.</p>
+            <div class="fake-browser"><i></i><i></i><i></i><b>HAZEL INSURANCE GROUP</b></div>
+            <a class="project-live" href="https://hazel.one.zysites.com/" target="_blank" rel="noopener">View live site ↗</a>
           </article>
           <article class="project-small reveal">
             <span>03 / ECOMMERCE</span>
@@ -381,6 +384,39 @@
       revealEls.forEach(el => io.observe(el));
     } else {
       revealEls.forEach(el => el.classList.add('is-visible'));
+    }
+
+    // Scroll progress + subtle section parallax.
+    const progress = document.getElementById('scrollProgress');
+    const parallaxItems = document.querySelectorAll('.hero-art, .project-visual, .contact-glow');
+    const updateScrollEffects = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      if (progress) progress.style.width = pct + '%';
+      if (!reduceMotion) {
+        parallaxItems.forEach((el, i) => {
+          const rect = el.getBoundingClientRect();
+          const offset = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * 0.035;
+          el.style.setProperty('--scroll-shift', `${offset}px`);
+        });
+      }
+    };
+    window.addEventListener('scroll', updateScrollEffects, { passive: true });
+    updateScrollEffects();
+
+    // Target-style custom cursor. It expands and changes colour over interactive elements.
+    const cursorTarget = document.getElementById('cursorTarget');
+    const finePointer = window.matchMedia('(pointer:fine)').matches;
+    if (cursorTarget && finePointer && !reduceMotion) {
+      document.body.classList.add('custom-cursor');
+      window.addEventListener('pointermove', e => {
+        cursorTarget.style.left = e.clientX + 'px';
+        cursorTarget.style.top = e.clientY + 'px';
+      });
+      document.querySelectorAll('a, button, .stack-card, .project-small, .project-feature').forEach(el => {
+        el.addEventListener('pointerenter', () => cursorTarget.classList.add('hover'));
+        el.addEventListener('pointerleave', () => cursorTarget.classList.remove('hover'));
+      });
     }
 
     // Tiny cursor-reactive effect for the hero code card.
