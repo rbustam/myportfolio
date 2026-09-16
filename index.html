@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramon Bustamante — Web Developer</title>
+<meta name="description" content="Ramon Bustamante — Web Developer with 4+ years of experience in WordPress, PHP and JavaScript, based in Sydney, Australia.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231A1F25'/%3E%3Ctext x='32' y='43' font-family='Georgia, serif' font-size='30' font-weight='700' fill='%235FCF8F' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#12151A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="grid-bg"></div>
+
+  <header>
+    <div class="wrap nav-wrap">
+      <a href="#top" class="logo" aria-label="Ramon home">
+        <span class="logo-mark">R</span><span>ramon<span class="muted">.dev</span></span>
+      </a>
+
+      <nav id="siteNav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger"><span></span><span></span><span></span></span>
+        </button>
+      </nav>
+
+      <a href="resume.pdf" class="btn btn-outline header-cta" target="_blank" rel="noopener">Resume ↗</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="pulse"></span> AVAILABLE FOR WEB DEVELOPMENT ROLES</div>
+          <div class="hero-kicker">WEB / WORDPRESS / PHP / APPLIED AI</div>
+          <h1>I build websites<br>that <span>do the work.</span></h1>
+          <p class="hero-lede">
+            Web developer with 4+ years across design, development, integrations,
+            deployment and maintenance. Currently building custom WordPress solutions
+            while studying Applied AI at Macquarie University.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-solid">Explore my work <span>↓</span></a>
+            <a href="mailto:rbustam93@gmail.com" class="btn btn-ghost">Let's talk ↗</a>
+          </div>
+
+          <div class="hero-terminal">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+              <code>ramon@dev:~$</code>
+            </div>
+            <div class="terminal-body">
+              <div><span class="prompt-sign">$</span> whoami</div>
+              <div class="terminal-output">web_developer · problem_solver · ai_student</div>
+              <div><span class="prompt-sign">$</span> location</div>
+              <div class="terminal-output">Sydney, Australia <span class="blink">_</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-art reveal">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="code-card">
+            <div class="code-head"><span>portfolio.js</span><span>● ● ●</span></div>
+            <pre><span class="c-purple">const</span> <span class="c-blue">ramon</span> = {
+  <span class="c-green">role</span>: <span class="c-yellow">"Web Developer"</span>,
+  <span class="c-green">stack</span>: [
+    <span class="c-yellow">"WordPress"</span>,
+    <span class="c-yellow">"PHP"</span>,
+    <span class="c-yellow">"JavaScript"</span>
+  ],
+  <span class="c-green">location</span>: <span class="c-yellow">"Sydney, AU"</span>,
+  <span class="c-green">next</span>: <span class="c-yellow">"Applied AI"</span>
+};</pre>
+          </div>
+          <div class="floating-chip chip-one">PHP <b>↗</b></div>
+          <div class="floating-chip chip-two">WP <b>+</b> ACF</div>
+          <div class="floating-chip chip-three">AI / ML</div>
+          <div class="hero-number">01<span>/06</span></div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+
+    <!-- ABOUT / NUMBERS -->
+    <section class="section about-section" id="about">
+      <div class="wrap">
+        <div class="section-label reveal">01 — ABOUT</div>
+        <div class="about-grid">
+          <div class="about-intro reveal">
+            <h2>Not just pages.<br><em>Systems.</em></h2>
+            <p>
+              I work across the full web development lifecycle — from translating a design
+              into a responsive interface to connecting APIs, configuring hosting,
+              debugging production issues and keeping sites healthy.
+            </p>
+            <p>
+              Most recently I've been building custom WordPress themes and ACF-driven
+              page sections at <strong>Advisen PHL</strong>, after working on WooCommerce,
+              APIs and MySQL-backed environments at Snapscale and Carve.
+            </p>
+          </div>
+
+          <div class="about-facts reveal">
+            <div class="fact-row"><span>BASE</span><strong>Sydney, Australia</strong></div>
+            <div class="fact-row"><span>FROM</span><strong>Davao City, Philippines</strong></div>
+            <div class="fact-row"><span>EDUCATION</span><strong>M.IT · Applied AI</strong></div>
+            <div class="fact-row"><span>UNIVERSITY</span><strong>Macquarie University</strong></div>
+            <div class="fact-row"><span>FOCUS</span><strong>Web · WordPress · AI</strong></div>
+            <div class="fact-row"><span>STATUS</span><strong class="live">● Open to work</strong></div>
+          </div>
+        </div>
+
+        <div class="stat-strip reveal">
+          <div><strong>4+</strong><span>YEARS<br>EXPERIENCE</span></div>
+          <div><strong>3</strong><span>COMPANIES<br>WORKED WITH</span></div>
+          <div><strong>3K+</strong><span>USERS<br>SUPPORTED</span></div>
+          <div><strong>∞</strong><span>THINGS TO<br>OPTIMISE</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="section stack-section" id="stack">
+      <div class="wrap">
+        <div class="section-label reveal">02 — STACK</div>
+        <div class="section-title-row reveal">
+          <div>
+            <h2>Tools I use to<br><em>ship things.</em></h2>
+          </div>
+          <p>Comfortable jumping between front-end, CMS, backend, databases and the messy middle where integrations live.</p>
+        </div>
+
+        <div class="stack-grid">
+          <article class="stack-card featured reveal">
+            <span class="stack-index">01</span>
+            <span class="stack-icon">&lt;/&gt;</span>
+            <h3>Frontend</h3>
+            <p>Interfaces that work across screens, browsers and real-world content.</p>
+            <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span></div>
+          </article>
+
+          <article class="stack-card reveal">
+            <span class="stack-index">02</span>
+            <span class="stack-icon">PHP</span>
+            <h3>Backend + Data</h3>
+            <p>Server-side development, databases and the plumbing behind websites.</p>
+            <div class="tags"><span>PHP</span><span>MySQL</span><span>MSSQL</span><span>C#</span><span>phpMyAdmin</span></div>
+          </article>
+
+          <article class="stack-card reveal">
+            <span class="stack-index">03</span>
+            <span class="stack-icon">WP</span>
+            <h3>WordPress</h3>
+            <p>Custom themes, ACF sections, builders, WooCommerce and maintenance.</p>
+            <div class="tags"><span>WordPress</span><span>ACF</span><span>WooCommerce</span><span>Builders</span></div>
+          </article>
+
+          <article class="stack-card reveal">
+            <span class="stack-index">04</span>
+            <span class="stack-icon">API</span>
+            <h3>Integrations</h3>
+            <p>Connecting systems, syncing data and making separate tools behave like one.</p>
+            <div class="tags"><span>REST APIs</span><span>Payments</span><span>Data Sync</span><span>DNS</span></div>
+          </article>
+
+          <article class="stack-card reveal">
+            <span class="stack-index">05</span>
+            <span class="stack-icon">✦</span>
+            <h3>Design + 3D</h3>
+            <p>A visual background that helps bridge the gap between design and development.</p>
+            <div class="tags"><span>Illustrator</span><span>Photoshop</span><span>Unity 3D</span></div>
+          </article>
+
+          <article class="stack-card learning reveal">
+            <span class="stack-index">06</span>
+            <span class="stack-icon">AI</span>
+            <h3>Next chapter</h3>
+            <p>Building deeper capability in AI and machine learning through postgraduate study.</p>
+            <div class="tags"><span>Applied AI</span><span>Machine Learning</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section experience-section" id="experience">
+      <div class="wrap">
+        <div class="section-label reveal">03 — EXPERIENCE</div>
+        <div class="section-title-row reveal">
+          <h2>Where I've<br><em>shipped.</em></h2>
+          <p>Three chapters, one recurring theme: build it, connect it, test it, fix it, improve it.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-marker">01</div>
+            <div class="timeline-date">JAN 2024 — PRESENT</div>
+            <div class="timeline-content">
+              <div class="job-top"><h3>Website Developer</h3><span>Advisen PHL, Inc.</span></div>
+              <ul>
+                <li>Develop responsive custom WordPress themes in a PHP environment.</li>
+                <li>Build custom page sections using ACF.</li>
+                <li>Design layouts and UI with HTML/CSS best practices, QA and site testing.</li>
+                <li>Deploy sites by configuring DNS and connecting hosting to WordPress.</li>
+              </ul>
+              <div class="tags"><span>WordPress</span><span>PHP</span><span>ACF</span><span>DNS</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker">02</div>
+            <div class="timeline-date">NOV 2021 — JAN 2024</div>
+            <div class="timeline-content">
+              <div class="job-top"><h3>Website Developer</h3><span>Snapscale</span></div>
+              <ul>
+                <li>Developed, tested and deployed web applications with cross-functional teams.</li>
+                <li>Built responsive interfaces with HTML5, CSS3 and JavaScript.</li>
+                <li>Built responsive pages using custom builder tools and WordPress plugins.</li>
+                <li>Tracked industry trends and recommended continuous improvements.</li>
+              </ul>
+              <div class="tags"><span>JavaScript</span><span>WordPress</span><span>CSS3</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker">03</div>
+            <div class="timeline-date">2020 — 2021</div>
+            <div class="timeline-content">
+              <div class="job-top"><h3>Website Developer</h3><span>Carve Business Management Services</span></div>
+              <ul>
+                <li>Integrated secure payment gateways for WooCommerce stores supporting 3,000+ users.</li>
+                <li>Developed and integrated third-party APIs for order processing and data sync.</li>
+                <li>Configured hosting, server-side environments and MySQL databases.</li>
+                <li>Handled migrations, maintenance, debugging and performance checks.</li>
+              </ul>
+              <div class="tags"><span>WooCommerce</span><span>APIs</span><span>MySQL</span><span>Payments</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section education-section">
+      <div class="wrap education-grid">
+        <div class="section-label reveal">04 — EDUCATION</div>
+        <div class="edu-main reveal">
+          <div class="edu-year">2016 — 2020</div>
+          <h2>BS Information<br><em>Technology.</em></h2>
+          <p>Holy Cross of Davao College</p>
+          <div class="award">
+            <span>★</span>
+            <div><strong>Best in Capstone 2020</strong><small>Museo — virtual tour guide for Davao Museum using augmented reality.</small></div>
+          </div>
+        </div>
+        <div class="edu-next reveal">
+          <div class="edu-year">CURRENT</div>
+          <div class="degree-badge">M.IT</div>
+          <h3>Applied AI</h3>
+          <p>Macquarie University<br>Sydney, Australia</p>
+          <div class="mini-code">learning.next = [<b>"AI"</b>, <b>"ML"</b>];</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section projects-section" id="projects">
+      <div class="wrap">
+        <div class="section-label reveal">05 — SELECTED WORK</div>
+        <div class="section-title-row reveal">
+          <h2>Projects, not<br><em>placeholders.</em></h2>
+          <p>The portfolio itself is a project. More real client and personal work can be added here as links become available.</p>
+        </div>
+
+        <div class="project-feature reveal">
+          <div class="project-visual">
+            <div class="visual-grid"></div>
+            <div class="museo-screen">
+              <div class="museum-top">MUSEO <span>AR TOUR</span></div>
+              <div class="museum-art">⌁</div>
+              <div class="museum-caption">A virtual tour<br>through Davao.</div>
+            </div>
+            <span class="visual-tag">CAPSTONE / 2020</span>
+          </div>
+          <div class="project-info">
+            <span class="project-number">PROJECT 01</span>
+            <h3>Museo — AR Museum Tour Guide</h3>
+            <p>
+              An augmented reality virtual tour guide for the Davao Museum,
+              created as a capstone project and awarded Best in Capstone 2020.
+            </p>
+            <div class="tags"><span>Unity 3D</span><span>C#</span><span>AR</span></div>
+            <div class="project-links"><a href="#" aria-disabled="true">Live ↗</a><a href="#" aria-disabled="true">Code ↗</a></div>
+          </div>
+        </div>
+
+        <div class="project-cards">
+          <article class="project-small reveal">
+            <span>02 / WORDPRESS</span>
+            <h3>Custom Theme Lab</h3>
+            <p>A space for a future public WordPress build, custom theme or ACF implementation.</p>
+            <div class="fake-browser"><i></i><i></i><i></i><b>YOUR PROJECT HERE</b></div>
+          </article>
+          <article class="project-small reveal">
+            <span>03 / ECOMMERCE</span>
+            <h3>Commerce + API</h3>
+            <p>Showcase a WooCommerce project with payment, API or data-sync work here.</p>
+            <div class="fake-browser commerce"><i></i><i></i><i></i><b>STORE / API / DATA</b></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="wrap">
+        <div class="contact-card reveal">
+          <div class="contact-glow"></div>
+          <div class="section-label">06 — CONTACT</div>
+          <h2>Have a website<br>that needs <em>building?</em></h2>
+          <p>I'm open to web developer opportunities in Sydney. Let's build something useful.</p>
+
+          <div class="contact-grid">
+            <a class="contact-link" href="mailto:rbustam93@gmail.com"><span>EMAIL</span><b>rbustam93@gmail.com ↗</b></a>
+            <a class="contact-link" href="tel:+61403941724"><span>PHONE</span><b>+61 403 941 724 ↗</b></a>
+            <a class="contact-link" href="https://www.linkedin.com/in/rbustam93/" target="_blank" rel="noopener"><span>LINKEDIN</span><b>/in/rbustam93 ↗</b></a>
+            <a class="contact-link" href="https://github.com/rbustam" target="_blank" rel="noopener"><span>GITHUB</span><b>@rbustam ↗</b></a>
+          </div>
+        </div>
+
+        <footer>
+          <span>© <span id="year"></span> Ramon III M. Bustamante</span>
+          <span>BUILT WITH HTML / CSS / JS · SYDNEY, AU</span>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const nav = document.getElementById('siteNav');
+    const navToggle = document.getElementById('navToggle');
+    navToggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', false);
+    }));
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealEls = document.querySelectorAll('.reveal');
+
+    if ('IntersectionObserver' in window && !reduceMotion) {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('is-visible'));
+    }
+
+    // Tiny cursor-reactive effect for the hero code card.
+    const art = document.querySelector('.hero-art');
+    const code = document.querySelector('.code-card');
+    if (art && code && !reduceMotion) {
+      art.addEventListener('pointermove', e => {
+        const r = art.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - .5;
+        const y = (e.clientY - r.top) / r.height - .5;
+        code.style.transform = `perspective(900px) rotateY(${x * 8}deg) rotateX(${y * -6}deg)`;
+      });
+      art.addEventListener('pointerleave', () => {
+        code.style.transform = '';
+      });
+    }
+  </script>
+</body>
+</html>
