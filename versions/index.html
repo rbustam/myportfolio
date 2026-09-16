@@ -13,439 +13,426 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="noise"></div>
+  <div class="grid-bg"></div>
+  <div class="cursor-target" id="cursorTarget" aria-hidden="true"><span></span></div>
 
-<header>
-  <div class="wrap">
-    <a href="#top" class="logo"><span class="dot"></span>ramon<span class="muted">.dev</span></a>
-    <nav id="siteNav">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <span class="hamburger"><span></span><span></span><span></span></span>
-      </button>
-    </nav>
-    <a href="resume.pdf" class="btn btn-outline header-cta" target="_blank" rel="noopener">Resume</a>
-  </div>
-</header>
+  <header>
+    <div class="wrap nav-wrap">
+      <a href="#top" class="logo" aria-label="Ramon home">
+        <span class="logo-mark">R</span><span>ramon<span class="muted">.dev</span></span>
+      </a>
 
-<main id="top">
-<div class="hscroll" id="hscroll">
-
-  <!-- ================= HERO ================= -->
-  <section class="hero panel">
-    <div class="wrap">
-      <div>
-        <div class="eyebrow">portfolio.build — status: ready</div>
-        <h1>Ramon III M. <span>Bustamante</span></h1>
-        <p class="lede">
-          Web developer with 4+ years across the full development lifecycle — design, build,
-          testing, deployment and maintenance. Currently building custom WordPress solutions at
-          Advisen PHL, now based in Sydney and studying Applied AI at Macquarie University.
-        </p>
-
-        <div class="status-bar" aria-live="polite">
-          <span class="status-dot"></span>
-          <span class="status-branch">
-            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M5 3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM5 3v7a3 3 0 0 0 3 3h3" stroke="#9FB8AC" stroke-width="1.3"/><circle cx="3" cy="3" r="1.4" stroke="#9FB8AC" stroke-width="1.3"/></svg>
-            main
-          </span>
-          <span class="status-sep">·</span>
-          <span id="roleText">Web Developer</span><span class="status-cursor">|</span>
-        </div>
-
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-solid">View projects</a>
-          <a href="mailto:rbustam93@gmail.com" class="btn btn-outline">Get in touch</a>
-        </div>
-      </div>
-
-      <div class="hero-meta">
-        <div class="meta-row"><span class="k">LOCATION</span><span class="v">Sydney, Australia</span></div>
-        <div class="meta-row"><span class="k">EXPERIENCE</span><span class="v">4+ years</span></div>
-        <div class="meta-row"><span class="k">STUDYING</span><span class="v">M.IT (Applied AI), Macquarie Uni</span></div>
-        <div class="meta-row"><span class="k">AVAILABILITY</span><span class="v">Open to web developer roles</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ABOUT ================= -->
-  <section class="about panel" id="about">
-    <div class="wrap">
-      <div class="reveal">
-        <div class="eyebrow">about</div>
-        <h2 class="section-title">Web Development + applied AI</h2>
-        <p>
-          I'm a web developer experienced across the full development lifecycle — design, build,
-          testing, deployment and maintenance. Most recently I've been building custom WordPress
-          themes and ACF-driven page sections at <strong>Advisen PHL</strong>, after roles at
-          <strong>Snapscale</strong> (formerly Carpediem Solutions) and <strong>Carve Business
-          Management Services</strong>, where I worked on WooCommerce stores, third-party API
-          integrations and MySQL-backed hosting environments.
-        </p>
-        <p>
-          I recently relocated my job search to Sydney, where I'm completing a Master of Information Technology,
-          specialising in Applied AI, at Macquarie University. I'm looking for a web developer or digital
-          coordinator role where I can keep shipping solid front-end and WordPress work while growing into
-          AI-assisted tooling.
-        </p>
-      </div>
-      <div class="facts reveal">
-        <div class="fact"><span class="k">based_in</span><span class="v">Sydney, AU</span></div>
-        <div class="fact"><span class="k">relocated_from</span><span class="v">Davao City, PH</span></div>
-        <div class="fact"><span class="k">studying</span><span class="v">Macquarie University</span></div>
-        <div class="fact"><span class="k">focus</span><span class="v">Web Dev · Applied AI</span></div>
-        <div class="fact"><span class="k">target_role</span><span class="v">Web Developer</span></div>
-        <div class="fact"><span class="k">status</span><span class="v">Open to work</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= SKILLS ================= -->
-  <section class="panel" id="skills">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">stack</div>
-        <h2 class="section-title">Toolkit</h2>
-      </div>
-      <div class="skills-grid reveal">
-        <div class="skill-card">
-          <span class="count">04 tools</span>
-          <h3>Frontend</h3>
-          <div class="tag-row">
-            <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Responsive Design</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <span class="count">05 tools</span>
-          <h3>Backend &amp; Databases</h3>
-          <div class="tag-row">
-            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">MSSQL</span><span class="tag">phpMyAdmin</span><span class="tag">C#</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <span class="count">04 tools</span>
-          <h3>CMS &amp; Ecommerce</h3>
-          <div class="tag-row">
-            <span class="tag">WordPress</span><span class="tag">ACF</span><span class="tag">WooCommerce</span><span class="tag">Page Builders</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <span class="count">03 tools</span>
-          <h3>Design &amp; 3D</h3>
-          <div class="tag-row">
-            <span class="tag">Adobe Illustrator</span><span class="tag">Adobe Photoshop</span><span class="tag">Unity 3D</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <span class="count">core</span>
-          <h3>Strengths</h3>
-          <div class="tag-row">
-            <span class="tag">Performance Optimization</span><span class="tag">Problem Solving</span><span class="tag">Teamwork</span>
-          </div>
-        </div>
-        <div class="skill-card learning">
-          <span class="count">in progress</span>
-          <h3>Currently learning</h3>
-          <div class="tag-row">
-            <span class="tag">Applied AI</span><span class="tag">Machine Learning</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= EXPERIENCE ================= -->
-  <section class="panel" id="experience">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">experience — 01 / 03</div>
-        <h2 class="section-title">Website Developer</h2>
-      </div>
-      <div class="exp-block reveal">
-        <div class="exp-meta">
-          <span class="exp-org">Advisen PHL, Inc.</span>
-          <span class="exp-date">Jan 2024 — Present</span>
-        </div>
-        <ul class="exp-list">
-          <li>Develop responsive custom WordPress themes in a PHP environment</li>
-          <li>Build custom WordPress page sections using the ACF plugin</li>
-          <li>Design layouts and UI following HTML/CSS best practices, plus QA and site testing</li>
-          <li>Deploy sites by configuring DNS and connecting hosting to WordPress</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="panel" id="experience-2">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">experience — 02 / 03</div>
-        <h2 class="section-title">Website Developer</h2>
-      </div>
-      <div class="exp-block reveal">
-        <div class="exp-meta">
-          <span class="exp-org">Snapscale (formerly Carpediem Solutions)</span>
-          <span class="exp-date">Nov 2021 — Jan 2024</span>
-        </div>
-        <ul class="exp-list">
-          <li>Developed, tested and deployed web applications with cross-functional teams</li>
-          <li>Built responsive interfaces with HTML5, CSS3 and JavaScript across devices</li>
-          <li>Built responsive pages using custom builder tools and plugins within WordPress</li>
-          <li>Tracked industry trends and recommended continuous improvements</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="panel" id="experience-3">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">experience — 03 / 03</div>
-        <h2 class="section-title">Website Developer</h2>
-      </div>
-      <div class="exp-block reveal">
-        <div class="exp-meta">
-          <span class="exp-org">Carve Business Management Services</span>
-          <span class="exp-date">2020 — 2021</span>
-        </div>
-        <ul class="exp-list">
-          <li>Integrated secure payment gateways for WooCommerce stores supporting 3,000+ users</li>
-          <li>Developed and integrated third-party APIs for order processing and data sync</li>
-          <li>Configured server-side environments, hosting, and MySQL databases via phpMyAdmin</li>
-          <li>Handled site migration, maintenance, debugging and performance checks</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= EDUCATION ================= -->
-  <section class="panel" id="education">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">education</div>
-        <h2 class="section-title">Education</h2>
-      </div>
-      <div class="edu-card reveal">
-        <div class="edu-main">
-          <h3>BS in Information Technology</h3>
-          <div class="edu-org">Holy Cross of Davao College</div>
-          <span class="edu-date">2016 — 2020</span>
-        </div>
+      <nav id="siteNav">
         <ul>
-          <li>Best in Capstone 2020 — Museo: a virtual tour guide for Davao Museum using augmented reality</li>
-          <li>Certificates: SMART SWEEP, CISCO Packet Tracer, Android Dev Training</li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
-    </div>
-  </section>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger"><span></span><span></span><span></span></span>
+        </button>
+      </nav>
 
-  <!-- ================= PROJECTS ================= -->
-  <section class="panel" id="projects">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">selected work</div>
-        <h2 class="section-title">Projects</h2>
+      <a href="resume.pdf" class="btn btn-outline header-cta" target="_blank" rel="noopener">Resume ↗</a>
+    </div>
+  </header>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="pulse"></span> AVAILABLE FOR WEB DEVELOPMENT ROLES</div>
+          <div class="hero-kicker">WEB / WORDPRESS / PHP / APPLIED AI</div>
+          <h1>I build websites<br>that <span>do the work.</span></h1>
+          <p class="hero-lede">
+            Web developer with 4+ years across design, development, integrations,
+            deployment and maintenance. Currently building custom WordPress solutions
+            while studying Applied AI at Macquarie University.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-solid">Explore my work <span>↓</span></a>
+            <a href="mailto:rbustam93@gmail.com" class="btn btn-ghost">Let's talk ↗</a>
+          </div>
+
+          <div class="hero-terminal">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+              <code>ramon@dev:~$</code>
+            </div>
+            <div class="terminal-body">
+              <div><span class="prompt-sign">$</span> whoami</div>
+              <div class="terminal-output">web_developer · problem_solver · ai</div>
+              <div><span class="prompt-sign">$</span> location</div>
+              <div class="terminal-output">Sydney, Australia <span class="blink">_</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-art reveal">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="code-card">
+            <div class="code-head"><span>portfolio.js</span><span>● ● ●</span></div>
+            <pre><span class="c-purple">const</span> <span class="c-blue">ramon</span> = {
+  <span class="c-green">role</span>: <span class="c-yellow">"Web Developer"</span>,
+  <span class="c-green">stack</span>: [
+    <span class="c-yellow">"WordPress"</span>,
+    <span class="c-yellow">"PHP"</span>,
+    <span class="c-yellow">"JavaScript"</span>
+  ],
+  <span class="c-green">location</span>: <span class="c-yellow">"Sydney, AU"</span>,
+  <span class="c-green">next</span>: <span class="c-yellow">"Applied AI"</span>
+};</pre>
+          </div>
+          <div class="floating-chip chip-one">PHP <b>↗</b></div>
+          <div class="floating-chip chip-two">WP <b>+</b> ACF</div>
+          <div class="floating-chip chip-three">AI / ML</div>
+          <div class="hero-number">01<span>/06</span></div>
+        </div>
       </div>
-      <!-- EDIT: add live/repo links once you have them, and swap in more real client projects -->
-      <div class="project-grid reveal">
-        <div class="project-card">
-          <div class="project-top">
+      <div class="scroll-cue"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+
+    <!-- ABOUT / NUMBERS -->
+    <section class="section about-section" id="about">
+      <div class="wrap">
+        <div class="section-label reveal">01 — ABOUT</div>
+        <div class="about-grid">
+          <div class="about-intro reveal">
+            <h2>Not just pages.<br><em>Systems.</em></h2>
+            <p>
+              I work across the full web development lifecycle — from translating a design
+              into a responsive interface to connecting APIs, configuring hosting,
+              debugging production issues and keeping sites healthy.
+            </p>
+            <p>
+              Most recently I've been building custom WordPress themes and ACF-driven
+              page sections at <strong>Zywave Inc.</strong>, after working on WooCommerce,
+              APIs and MySQL-backed environments at MyAdvice and Carve.
+            </p>
+          </div>
+
+          <div class="about-facts reveal">
+            <div class="fact-row"><span>BASE</span><strong>Sydney, Australia</strong></div>
+            <div class="fact-row"><span>FROM</span><strong>Davao City, Philippines</strong></div>
+            <div class="fact-row"><span>EDUCATION</span><strong>M.IT · Applied AI</strong></div>
+            <div class="fact-row"><span>UNIVERSITY</span><strong>Macquarie University</strong></div>
+            <div class="fact-row"><span>FOCUS</span><strong>Web · WordPress · AI</strong></div>
+            <div class="fact-row"><span>STATUS</span><strong class="live">● Open to work</strong></div>
+          </div>
+        </div>
+
+        <div class="stat-strip reveal">
+          <div><strong>4+</strong><span>YEARS<br>EXPERIENCE</span></div>
+          <div><strong>3</strong><span>COMPANIES<br>WORKED WITH</span></div>
+          <div><strong>3K+</strong><span>USERS<br>SUPPORTED</span></div>
+          <div><strong>∞</strong><span>THINGS TO<br>OPTIMISE</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="section stack-section" id="stack">
+      <div class="wrap">
+        <div class="section-label reveal">02 — STACK</div>
+        <div class="section-title-row reveal">
+          <div>
+            <h2>Tools I use to<br><em>ship things.</em></h2>
+          </div>
+          <p>Comfortable jumping between front-end, CMS, backend, databases and the messy middle where integrations live.</p>
+        </div>
+
+        <div class="stack-grid">
+          <article class="stack-card featured reveal">
+            <span class="stack-index">01</span>
+            <span class="stack-icon">&lt;/&gt;</span>
+            <h3>Frontend</h3>
+            <p>Interfaces that work across screens, browsers and real-world content.</p>
+            <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span></div>
+          </article>
+
+          <article class="stack-card reveal">
+            <span class="stack-index">02</span>
+            <span class="stack-icon">PHP</span>
+            <h3>Backend + Data</h3>
+            <p>Server-side development, databases and the plumbing behind websites.</p>
+            <div class="tags"><span>PHP</span><span>MySQL</span><span>MSSQL</span><span>C#</span><span>phpMyAdmin</span></div>
+          </article>
+
+          <article class="stack-card reveal">
+            <span class="stack-index">03</span>
+            <span class="stack-icon">WP</span>
+            <h3>WordPress</h3>
+            <p>Custom themes, ACF sections, builders, WooCommerce and maintenance.</p>
+            <div class="tags"><span>WordPress</span><span>ACF</span><span>WooCommerce</span><span>Builders</span></div>
+          </article>
+
+          <article class="stack-card reveal">
+            <span class="stack-index">04</span>
+            <span class="stack-icon">API</span>
+            <h3>Integrations</h3>
+            <p>Connecting systems, syncing data and making separate tools behave like one.</p>
+            <div class="tags"><span>REST APIs</span><span>Payments</span><span>Data Sync</span><span>DNS</span></div>
+          </article>
+
+          <article class="stack-card reveal">
+            <span class="stack-index">05</span>
+            <span class="stack-icon">✦</span>
+            <h3>Design + 3D</h3>
+            <p>A visual background that helps bridge the gap between design and development.</p>
+            <div class="tags"><span>Illustrator</span><span>Photoshop</span><span>Unity 3D</span></div>
+          </article>
+
+          <article class="stack-card learning reveal">
+            <span class="stack-index">06</span>
+            <span class="stack-icon">AI</span>
+            <h3>Next chapter</h3>
+            <p>Building deeper capability in AI and machine learning through postgraduate study.</p>
+            <div class="tags"><span>Applied AI</span><span>Machine Learning</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section experience-section" id="experience">
+      <div class="wrap">
+        <div class="section-label reveal">03 — EXPERIENCE</div>
+        <div class="section-title-row reveal">
+          <h2>Where I've<br><em>shipped.</em></h2>
+          <p>Three chapters, one recurring theme: build it, connect it, test it, fix it, improve it.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-marker">01</div>
+            <div class="timeline-date">JAN 2024 — PRESENT</div>
+            <div class="timeline-content">
+              <div class="job-top"><h3>Website Developer</h3><span>Zywave Inc.</span></div>
+              <ul>
+                <li>Develop responsive custom WordPress themes in a PHP environment.</li>
+                <li>Build custom page sections using ACF.</li>
+                <li>Design layouts and UI with HTML/CSS best practices, QA and site testing.</li>
+                <li>Deploy sites by configuring DNS and connecting hosting to WordPress.</li>
+              </ul>
+              <div class="tags"><span>WordPress</span><span>PHP</span><span>ACF</span><span>DNS</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker">02</div>
+            <div class="timeline-date">NOV 2021 — JAN 2024</div>
+            <div class="timeline-content">
+              <div class="job-top"><h3>Website Developer</h3><span>MyAdvice</span></div>
+              <ul>
+                <li>Developed, tested and deployed web applications with cross-functional teams.</li>
+                <li>Built responsive interfaces with HTML5, CSS3 and JavaScript.</li>
+                <li>Built responsive pages using custom builder tools and WordPress plugins.</li>
+                <li>Tracked industry trends and recommended continuous improvements.</li>
+              </ul>
+              <div class="tags"><span>JavaScript</span><span>WordPress</span><span>CSS3</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker">03</div>
+            <div class="timeline-date">2020 — 2021</div>
+            <div class="timeline-content">
+              <div class="job-top"><h3>Website Developer</h3><span>Carve Business Management Services</span></div>
+              <ul>
+                <li>Integrated secure payment gateways for WooCommerce stores supporting 3,000+ users.</li>
+                <li>Developed and integrated third-party APIs for order processing and data sync.</li>
+                <li>Configured hosting, server-side environments and MySQL databases.</li>
+                <li>Handled migrations, maintenance, debugging and performance checks.</li>
+              </ul>
+              <div class="tags"><span>WooCommerce</span><span>APIs</span><span>MySQL</span><span>Payments</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section education-section">
+      <div class="wrap education-grid">
+        <div class="section-label reveal">04 — EDUCATION</div>
+        <div class="edu-main reveal">
+          <div class="edu-year">2016 — 2020</div>
+          <h2>BS Information<br><em>Technology.</em></h2>
+          <p>Holy Cross of Davao College</p>
+          <div class="award">
+            <span>★</span>
+            <div><strong>Best in Capstone 2020</strong><small>Museo — virtual tour guide for Davao Museum using augmented reality.</small></div>
+          </div>
+        </div>
+        <div class="edu-next reveal">
+          <div class="edu-year">CURRENT</div>
+          <div class="degree-badge">M.IT</div>
+          <h3>Applied AI</h3>
+          <p>Macquarie University<br>Sydney, Australia</p>
+          <div class="mini-code">learning.next = [<b>"AI"</b>, <b>"ML"</b>];</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section projects-section" id="projects">
+      <div class="wrap">
+        <div class="section-label reveal">05 — SELECTED WORK</div>
+        <div class="section-title-row reveal">
+          <h2>Projects, not<br><em>placeholders.</em></h2>
+          <p>The portfolio itself is a project. More real client and personal work can be added here as links become available.</p>
+        </div>
+
+        <div class="project-feature reveal">
+          <div class="project-visual">
+            <div class="visual-grid"></div>
+            <div class="museo-screen">
+              <div class="museum-top">MUSEO <span>AR TOUR</span></div>
+              <div class="museum-art">⌁</div>
+              <div class="museum-caption">A virtual tour<br>through Davao.</div>
+            </div>
+            <span class="visual-tag">CAPSTONE / 2020</span>
+          </div>
+          <div class="project-info">
+            <span class="project-number">PROJECT 01</span>
             <h3>Museo — AR Museum Tour Guide</h3>
-            <span class="project-num">01</span>
-          </div>
-          <p>Augmented reality virtual tour guide for the Davao Museum, built as a capstone project — awarded Best in Capstone 2020 at Holy Cross of Davao College.</p>
-          <div class="tag-row">
-            <span class="tag">Unity 3D</span><span class="tag">C#</span><span class="tag">AR</span>
-          </div>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noopener">Live ↗</a>
-            <a href="#" target="_blank" rel="noopener">Code ↗</a>
+            <p>
+              An augmented reality virtual tour guide for the Davao Museum,
+              created as a capstone project and awarded Best in Capstone 2020.
+            </p>
+            <div class="tags"><span>Unity 3D</span><span>C#</span><span>AR</span></div>
+            <div class="project-links"><a href="#" aria-disabled="true">Live ↗</a><a href="#" aria-disabled="true">Code ↗</a></div>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-top">
-            <h3>Project Two</h3>
-            <span class="project-num">02</span>
-          </div>
-          <p>Add a client or personal project here — e.g. a WordPress build, WooCommerce store, or custom theme you can showcase.</p>
-          <div class="tag-row">
-            <span class="tag">WordPress</span><span class="tag">PHP</span>
-          </div>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noopener">Live ↗</a>
-            <a href="#" target="_blank" rel="noopener">Code ↗</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-top">
-            <h3>Project Three</h3>
-            <span class="project-num">03</span>
-          </div>
-          <p>One or two sentences on what this project does and the problem it solves.</p>
-          <div class="tag-row">
-            <span class="tag">WooCommerce</span><span class="tag">SEO</span>
-          </div>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noopener">Live ↗</a>
-            <a href="#" target="_blank" rel="noopener">Code ↗</a>
-          </div>
+
+        <div class="project-cards">
+          <article class="project-small reveal project-link-card">
+            <span>02 / WORDPRESS</span>
+            <h3>Custom Theme Lab</h3>
+            <p>A custom WordPress theme built for Hazel Insurance Group, showcasing responsive layouts, CMS-driven content and production-ready website development.</p>
+            <div class="fake-browser"><i></i><i></i><i></i><b>HAZEL INSURANCE GROUP</b></div>
+            <a class="project-live" href="https://hazel.one.zysites.com/" target="_blank" rel="noopener">View live site ↗</a>
+          </article>
+          <article class="project-small reveal">
+            <span>03 / ECOMMERCE</span>
+            <h3>Commerce + API</h3>
+            <p>Showcase a WooCommerce project with payment, API or data-sync work here.</p>
+            <div class="fake-browser commerce"><i></i><i></i><i></i><b>STORE / API / DATA</b></div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================= CONTACT ================= -->
-  <section class="panel panel-contact" id="contact">
-    <div class="wrap">
-      <div class="contact reveal">
-        <div class="contact-inner">
-          <h2>Let's work together</h2>
-          <p>Looking for a web developer or digital coordinator in Sydney? I'd love to hear from you.</p>
-          <div class="prompt">
-            <!-- EDIT: double-check the email below — it looked like it might be a typo of gmail.com on your resume. Add your real LinkedIn/GitHub too. -->
-            <div><span class="p1">$</span> <span class="p2">contact</span> --email <a href="mailto:rbustam93@gmail.com">rbustam93@gmail.com</a></div>
-            <div><span class="p1">$</span> <span class="p2">contact</span> --phone <a href="tel:+61403941724">+61 403 941 724</a></div>
-            <div><span class="p1">$</span> <span class="p2">contact</span> --linkedin <a href="https://www.linkedin.com/in/rbustam93/" target="_blank" rel="noopener">https://www.linkedin.com/in/rbustam93/</a></div>
-            <div><span class="p1">$</span> <span class="p2">contact</span> --github <a href="https://github.com/rbustam" target="_blank" rel="noopener">https://github.com/rbustam</a></div>
-          </div>
-          <div class="contact-cta">
-            <a href="mailto:rbustam93@gmail.com" class="btn btn-solid" style="background:#5FCF8F;color:#12181B">Email me</a>
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="wrap">
+        <div class="contact-card reveal">
+          <div class="contact-glow"></div>
+          <div class="section-label">06 — CONTACT</div>
+          <h2>Have a website<br>that needs <em>building?</em></h2>
+          <p>I'm open to web developer opportunities in Sydney. Let's build something useful.</p>
+
+          <div class="contact-grid">
+            <a class="contact-link" href="mailto:rbustam93@gmail.com"><span>EMAIL</span><b>rbustam93@gmail.com ↗</b></a>
+            <a class="contact-link" href="tel:+61403941724"><span>PHONE</span><b>+61 403 941 724 ↗</b></a>
+            <a class="contact-link" href="https://www.linkedin.com/in/rbustam93/" target="_blank" rel="noopener"><span>LINKEDIN</span><b>/in/rbustam93 ↗</b></a>
+            <a class="contact-link" href="https://github.com/rbustam" target="_blank" rel="noopener"><span>GITHUB</span><b>@rbustam ↗</b></a>
           </div>
         </div>
+
+        <footer>
+          <span>© <span id="year"></span> Ramon III M. Bustamante</span>
+          <span>BUILT WITH HTML / CSS / JS · SYDNEY, AU</span>
+        </footer>
       </div>
-      <footer>
-        <span id="year"></span> · Built with HTML, CSS &amp; JS · Deployed on GitHub Pages
-      </footer>
-    </div>
-  </section>
+    </section>
+  </main>
 
-</div><!-- /.hscroll -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-<nav class="dot-nav" id="dotNav" aria-label="Section navigation">
-  <button data-index="0" aria-label="Go to Hero" class="active"></button>
-  <button data-index="1" aria-label="Go to About"></button>
-  <button data-index="2" aria-label="Go to Skills"></button>
-  <button data-index="3" aria-label="Go to Experience 1 of 3"></button>
-  <button data-index="4" aria-label="Go to Experience 2 of 3"></button>
-  <button data-index="5" aria-label="Go to Experience 3 of 3"></button>
-  <button data-index="6" aria-label="Go to Education"></button>
-  <button data-index="7" aria-label="Go to Projects"></button>
-  <button data-index="8" aria-label="Go to Contact"></button>
-</nav>
-
-</main>
-
-<script>
-  // Footer year
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Mobile nav toggle
-  const nav = document.getElementById('siteNav');
-  const navToggle = document.getElementById('navToggle');
-  navToggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open);
-  });
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    nav.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', false);
-  }));
-
-  // Rotating role text in the status bar
-  // EDIT: change these to the roles/titles you want to highlight
-  const roles = ['Web Developer', 'WordPress & PHP Specialist', 'Applied AI Student @ Macquarie'];
-  let roleIndex = 0;
-  const roleText = document.getElementById('roleText');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!reduceMotion) {
-    setInterval(() => {
-      roleText.style.opacity = 0;
-      setTimeout(() => {
-        roleIndex = (roleIndex + 1) % roles.length;
-        roleText.textContent = roles[roleIndex];
-        roleText.style.opacity = 1;
-      }, 250);
-    }, 2800);
-  }
-
-  // ---- Horizontal snap-scroll (desktop only; mobile stays normal vertical scroll) ----
-  const hscroll = document.getElementById('hscroll');
-  const panels = Array.from(document.querySelectorAll('.panel'));
-  const dotNav = document.getElementById('dotNav');
-  const dots = dotNav ? Array.from(dotNav.querySelectorAll('button')) : [];
-  const isDesktopLayout = () => window.innerWidth > 860;
-
-  // Redirect vertical wheel/trackpad input into horizontal movement
-  hscroll.addEventListener('wheel', (e) => {
-    if (!isDesktopLayout()) return;
-    if (Math.abs(e.deltaY) >= Math.abs(e.deltaX)) {
-      e.preventDefault();
-      hscroll.scrollLeft += e.deltaY;
-    }
-  }, { passive: false });
-
-  // Arrow-key / Page Up-Down navigation between panels
-  window.addEventListener('keydown', (e) => {
-    if (!isDesktopLayout()) return;
-    if (e.key === 'ArrowRight' || e.key === 'PageDown') {
-      e.preventDefault();
-      hscroll.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
-    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
-      e.preventDefault();
-      hscroll.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
-    }
-  });
-
-  // Nav links + logo + "View projects" scroll to the right panel instead of jumping vertically
-  document.querySelectorAll('#siteNav a, .hero-cta a[href^="#"], .logo').forEach(a => {
-    a.addEventListener('click', (e) => {
-      const targetId = a.getAttribute('href').slice(1);
-      const target = document.getElementById(targetId);
-      if (!target || !isDesktopLayout()) return;
-      e.preventDefault();
-      hscroll.scrollTo({ left: target.offsetLeft, behavior: 'smooth' });
+    const nav = document.getElementById('siteNav');
+    const navToggle = document.getElementById('navToggle');
+    navToggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open);
     });
-  });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', false);
+    }));
 
-  // Dot navigation: click to jump, and highlight whichever panel is active
-  if (dotNav) {
-    dots.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const idx = parseInt(btn.dataset.index, 10);
-        hscroll.scrollTo({ left: panels[idx].offsetLeft, behavior: 'smooth' });
-      });
-    });
-    const syncDots = () => {
-      if (!isDesktopLayout()) return;
-      const idx = Math.round(hscroll.scrollLeft / window.innerWidth);
-      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealEls = document.querySelectorAll('.reveal');
+
+    if ('IntersectionObserver' in window && !reduceMotion) {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('is-visible'));
+    }
+
+    // Scroll progress + subtle section parallax.
+    const progress = document.getElementById('scrollProgress');
+    const parallaxItems = document.querySelectorAll('.hero-art, .project-visual, .contact-glow');
+    const updateScrollEffects = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      if (progress) progress.style.width = pct + '%';
+      if (!reduceMotion) {
+        parallaxItems.forEach((el, i) => {
+          const rect = el.getBoundingClientRect();
+          const offset = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * 0.035;
+          el.style.setProperty('--scroll-shift', `${offset}px`);
+        });
+      }
     };
-    hscroll.addEventListener('scroll', syncDots);
-    syncDots();
-  }
+    window.addEventListener('scroll', updateScrollEffects, { passive: true });
+    updateScrollEffects();
 
-  // Scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !reduceMotion) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          io.unobserve(entry.target);
-        }
+    // Target-style custom cursor. It expands and changes colour over interactive elements.
+    const cursorTarget = document.getElementById('cursorTarget');
+    const finePointer = window.matchMedia('(pointer:fine)').matches;
+    if (cursorTarget && finePointer && !reduceMotion) {
+      document.body.classList.add('custom-cursor');
+      window.addEventListener('pointermove', e => {
+        cursorTarget.style.left = e.clientX + 'px';
+        cursorTarget.style.top = e.clientY + 'px';
       });
-    }, { threshold: 0.15 });
-    revealEls.forEach(el => io.observe(el));
-  } else {
-    revealEls.forEach(el => el.classList.add('is-visible'));
-  }
-</script>
+      document.querySelectorAll('a, button, .stack-card, .project-small, .project-feature').forEach(el => {
+        el.addEventListener('pointerenter', () => cursorTarget.classList.add('hover'));
+        el.addEventListener('pointerleave', () => cursorTarget.classList.remove('hover'));
+      });
+    }
 
+    // Tiny cursor-reactive effect for the hero code card.
+    const art = document.querySelector('.hero-art');
+    const code = document.querySelector('.code-card');
+    if (art && code && !reduceMotion) {
+      art.addEventListener('pointermove', e => {
+        const r = art.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - .5;
+        const y = (e.clientY - r.top) / r.height - .5;
+        code.style.transform = `perspective(900px) rotateY(${x * 8}deg) rotateX(${y * -6}deg)`;
+      });
+      art.addEventListener('pointerleave', () => {
+        code.style.transform = '';
+      });
+    }
+  </script>
 </body>
 </html>
