@@ -15,7 +15,7 @@
 <body>
   <div class="noise"></div>
   <div class="grid-bg"></div>
-  <div class="cursor-target" id="cursorTarget" aria-hidden="true"><span></span></div>
+  <div class="cursor-target" id="cursorTarget" aria-hidden="true"><i class="target-corner tl"></i><i class="target-corner tr"></i><i class="target-corner bl"></i><i class="target-corner br"></i><span class="target-dot"></span></div>
 
   <header>
     <div class="wrap nav-wrap">
@@ -40,7 +40,7 @@
     </div>
   </header>
 
-  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="scroll-progress" id="scrollProgress"><span></span></div>
   <main id="top">
     <!-- HERO -->
     <section class="hero">
@@ -358,30 +358,43 @@
   <script>
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Scroll progress for normal document scrolling.
-    const progressBar = document.querySelector('#scrollProgress span');
-    const updateProgress = () => {
+    // Scroll progress + subtle section parallax.
+    const progress = document.getElementById('scrollProgress');
+    const progressFill = progress?.querySelector('span');
+    const parallaxItems = document.querySelectorAll('.hero-art, .project-visual, .contact-glow');
+    const updateScrollEffects = () => {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
-      if (progressBar) progressBar.style.width = pct + '%';
+      if (progressFill) progressFill.style.width = pct + '%';
+      if (!reduceMotion) {
+        parallaxItems.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          const offset = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * 0.035;
+          el.style.setProperty('--scroll-shift', `${offset}px`);
+        });
+      }
     };
-    window.addEventListener('scroll', updateProgress, {passive:true});
-    window.addEventListener('resize', updateProgress);
-    updateProgress();
+    window.addEventListener('scroll', updateScrollEffects, { passive: true });
+    window.addEventListener('resize', updateScrollEffects);
+    updateScrollEffects();
 
-    // Custom target cursor for mouse/trackpad devices.
-    const cursor = document.getElementById('cursorTarget');
-    if (cursor && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    // Precise target-style custom cursor.
+    const cursorTarget = document.getElementById('cursorTarget');
+    const finePointer = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+    if (cursorTarget && finePointer && !reduceMotion) {
       document.body.classList.add('custom-cursor');
-      let x=-100,y=-100,cx=-100,cy=-100;
-      window.addEventListener('pointermove', e => { x=e.clientX; y=e.clientY; cursor.classList.add('visible'); }, {passive:true});
-      const tick=()=>{ cx+=(x-cx)*.25; cy+=(y-cy)*.25; cursor.style.transform=`translate3d(${cx}px,${cy}px,0)`; requestAnimationFrame(tick); };
-      requestAnimationFrame(tick);
-      document.querySelectorAll('a,button,.stack-card,.project-feature,.project-small').forEach(el=>{
-        el.addEventListener('pointerenter',()=>cursor.classList.add('hovering'));
-        el.addEventListener('pointerleave',()=>cursor.classList.remove('hovering'));
+      window.addEventListener('pointermove', e => {
+        cursorTarget.style.left = `${e.clientX}px`;
+        cursorTarget.style.top = `${e.clientY}px`;
+        cursorTarget.classList.add('visible');
+      }, { passive: true });
+      document.querySelectorAll('a, button, .stack-card, .project-small, .project-feature').forEach(el => {
+        el.addEventListener('pointerenter', () => cursorTarget.classList.add('hover'));
+        el.addEventListener('pointerleave', () => cursorTarget.classList.remove('hover'));
       });
-    } else if (cursor) cursor.remove();
+    } else if (cursorTarget) {
+      cursorTarget.remove();
+    }
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -397,7 +410,6 @@
     }));
 
     const revealEls = document.querySelectorAll('.reveal');
-
     if ('IntersectionObserver' in window && !reduceMotion) {
       const io = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -412,39 +424,6 @@
       revealEls.forEach(el => el.classList.add('is-visible'));
     }
 
-    // Scroll progress + subtle section parallax.
-    const progress = document.getElementById('scrollProgress');
-    const parallaxItems = document.querySelectorAll('.hero-art, .project-visual, .contact-glow');
-    const updateScrollEffects = () => {
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
-      if (progress) progress.style.width = pct + '%';
-      if (!reduceMotion) {
-        parallaxItems.forEach((el, i) => {
-          const rect = el.getBoundingClientRect();
-          const offset = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * 0.035;
-          el.style.setProperty('--scroll-shift', `${offset}px`);
-        });
-      }
-    };
-    window.addEventListener('scroll', updateScrollEffects, { passive: true });
-    updateScrollEffects();
-
-    // Target-style custom cursor. It expands and changes colour over interactive elements.
-    const cursorTarget = document.getElementById('cursorTarget');
-    const finePointer = window.matchMedia('(pointer:fine)').matches;
-    if (cursorTarget && finePointer && !reduceMotion) {
-      document.body.classList.add('custom-cursor');
-      window.addEventListener('pointermove', e => {
-        cursorTarget.style.left = e.clientX + 'px';
-        cursorTarget.style.top = e.clientY + 'px';
-      });
-      document.querySelectorAll('a, button, .stack-card, .project-small, .project-feature').forEach(el => {
-        el.addEventListener('pointerenter', () => cursorTarget.classList.add('hover'));
-        el.addEventListener('pointerleave', () => cursorTarget.classList.remove('hover'));
-      });
-    }
-
     // Tiny cursor-reactive effect for the hero code card.
     const art = document.querySelector('.hero-art');
     const code = document.querySelector('.code-card');
@@ -455,9 +434,7 @@
         const y = (e.clientY - r.top) / r.height - .5;
         code.style.transform = `perspective(900px) rotateY(${x * 8}deg) rotateX(${y * -6}deg)`;
       });
-      art.addEventListener('pointerleave', () => {
-        code.style.transform = '';
-      });
+      art.addEventListener('pointerleave', () => { code.style.transform = ''; });
     }
   </script>
 </body>

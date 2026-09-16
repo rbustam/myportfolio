@@ -47,7 +47,7 @@
       <div class="wrap hero-grid">
         <div class="hero-copy reveal">
           <div class="eyebrow"><span class="pulse"></span> AVAILABLE FOR WEB DEVELOPMENT ROLES</div>
-          <div class="hero-kicker">WEB / WORDPRESS / PHP / APPLIED AI</div>
+          <div class="hero-kicker">WEB DEVELOPMENT / PHP / JAVASCRIPT / AI</div>
           <h1>I build websites<br>that <span>do the work.</span></h1>
           <p class="hero-lede">
             Web developer with 4+ years across design, development, integrations,
@@ -123,7 +123,7 @@
             <div class="fact-row"><span>FROM</span><strong>Davao City, Philippines</strong></div>
             <div class="fact-row"><span>EDUCATION</span><strong>M.IT · Applied AI</strong></div>
             <div class="fact-row"><span>UNIVERSITY</span><strong>Macquarie University</strong></div>
-            <div class="fact-row"><span>FOCUS</span><strong>Web · WordPress · AI</strong></div>
+            <div class="fact-row"><span>FOCUS</span><strong>Web Development · AI</strong></div>
             <div class="fact-row"><span>STATUS</span><strong class="live">● Open to work</strong></div>
           </div>
         </div>
@@ -194,7 +194,7 @@
             <span class="stack-icon">AI</span>
             <h3>Next chapter</h3>
             <p>Building deeper capability in AI and machine learning through postgraduate study.</p>
-            <div class="tags"><span>Applied AI</span><span>Machine Learning</span></div>
+            <div class="tags"><span>AI</span><span>Machine Learning</span></div>
           </article>
         </div>
       </div>
@@ -274,7 +274,7 @@
         <div class="edu-next reveal">
           <div class="edu-year">CURRENT</div>
           <div class="degree-badge">M.IT</div>
-          <h3>Applied AI</h3>
+          <h3>AI</h3>
           <p>Macquarie University<br>Sydney, Australia</p>
           <div class="mini-code">learning.next = [<b>"AI"</b>, <b>"ML"</b>];</div>
         </div>
@@ -314,7 +314,7 @@
 
         <div class="project-cards">
           <article class="project-small reveal project-link-card">
-            <span>02 / WORDPRESS</span>
+            <span>02 / WEB DEVELOPMENT</span>
             <h3>Custom Theme Lab</h3>
             <p>A custom WordPress theme built for Hazel Insurance Group, showcasing responsive layouts, CMS-driven content and production-ready website development.</p>
             <div class="fake-browser"><i></i><i></i><i></i><b>HAZEL INSURANCE GROUP</b></div>
@@ -356,6 +356,33 @@
   </main>
 
   <script>
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Scroll progress for normal document scrolling.
+    const progressBar = document.querySelector('#scrollProgress span');
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      if (progressBar) progressBar.style.width = pct + '%';
+    };
+    window.addEventListener('scroll', updateProgress, {passive:true});
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+
+    // Custom target cursor for mouse/trackpad devices.
+    const cursor = document.getElementById('cursorTarget');
+    if (cursor && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+      document.body.classList.add('custom-cursor');
+      let x=-100,y=-100,cx=-100,cy=-100;
+      window.addEventListener('pointermove', e => { x=e.clientX; y=e.clientY; cursor.classList.add('visible'); }, {passive:true});
+      const tick=()=>{ cx+=(x-cx)*.25; cy+=(y-cy)*.25; cursor.style.transform=`translate3d(${cx}px,${cy}px,0)`; requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+      document.querySelectorAll('a,button,.stack-card,.project-feature,.project-small').forEach(el=>{
+        el.addEventListener('pointerenter',()=>cursor.classList.add('hovering'));
+        el.addEventListener('pointerleave',()=>cursor.classList.remove('hovering'));
+      });
+    } else if (cursor) cursor.remove();
+
     document.getElementById('year').textContent = new Date().getFullYear();
 
     const nav = document.getElementById('siteNav');
@@ -369,7 +396,6 @@
       navToggle.setAttribute('aria-expanded', false);
     }));
 
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const revealEls = document.querySelectorAll('.reveal');
 
     if ('IntersectionObserver' in window && !reduceMotion) {
